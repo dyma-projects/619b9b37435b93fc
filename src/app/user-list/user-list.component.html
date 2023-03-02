@@ -1,6 +1,11 @@
 <div class="py-4">
   <h3>Liste des utilisateurs</h3>
   <ul class="py-2">
-    <li *ngFor="let user of users">{{ user }}</li>
+    <li
+      (click)="selectUser(index)"
+      *ngFor="let user of users; let index = index"
+    >
+      {{ user.usrName }}
+    </li>
   </ul>
 </div>
